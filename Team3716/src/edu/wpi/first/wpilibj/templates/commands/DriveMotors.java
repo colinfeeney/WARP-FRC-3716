@@ -19,7 +19,7 @@ public class DriveMotors extends CommandBase {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-        leftDriveFront = new Victor(5);
+        leftDriveFront = new Victor(1);
         leftDriveBack = new Victor(3);
         rightDriveFront = new Victor(2);
         rightDriveBack = new Victor(4);
