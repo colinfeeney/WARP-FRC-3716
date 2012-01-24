@@ -1,4 +1,4 @@
-package edu.wpi.first.wpilibj.templates;
+  package edu.wpi.first.wpilibj.templates;
 
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
@@ -16,4 +16,9 @@ public class RobotMap {
     // number and the module. For example you with a rangefinder:
     // public static final int rangefinderPort = 1;
     // public static final int rangefinderModule = 1;
+    public static final int leftDriveMotorTop = 1;
+    public static final int leftDriveMotorBottom = 3;
+    public static final int rightDriveMotorTop = 2;
+    public static final int rightDriveMotorBottom = 4;
+       
 }
