@@ -13,8 +13,8 @@ import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.templates.commands.CommandBase;
-import edu.wpi.first.wpilibj.templates.commands.DriveMotors;
-import edu.wpi.first.wpilibj.templates.subsystems.ExampleSubsystem;
+import edu.wpi.first.wpilibj.templates.commands.Autonomous;
+import edu.wpi.first.wpilibj.templates.subsystems.JoystickDriveMotors;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -33,7 +33,7 @@ public class RobotTemplate extends IterativeRobot {
      */
     public void robotInit() {
         // instantiate the command used for the autonomous period
-        autonomousCommand = new DriveMotors();
+        autonomousCommand = new Autonomous();
 
         // Initialize all subsystems
         CommandBase.init();
@@ -64,5 +64,6 @@ public class RobotTemplate extends IterativeRobot {
      */
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
-    }
+        Subsystems.
+            }
 }
