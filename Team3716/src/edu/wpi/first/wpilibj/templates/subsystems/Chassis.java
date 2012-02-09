@@ -1,8 +1,8 @@
 package edu.wpi.first.wpilibj.templates.subsystems;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.templates.commands.DriveWithJoystick;
 import edu.wpi.first.wpilibj.RobotDrive;
-import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.templates.OI;
 /**
  *
@@ -13,9 +13,12 @@ public class Chassis extends Subsystem {
 
     RobotDrive drive;
     OI op;
+    double x;
+    double y;
+    double[] xy;
 
     public void initDefaultCommand() {
-        setDefaultCommand(new driveWithJoystick());
+        setDefaultCommand(new DriveWithJoystick());
 
     }
 
@@ -40,7 +43,10 @@ public class Chassis extends Subsystem {
         drive.arcadeDrive(0.0, -1.0);
     }
     
-    public void goJoystick(double y, double x) {
+    public void goJoystick() {
+        xy = op.processDriveJoystick();
+        y= xy[0];
+        x= xy[1];
         drive.arcadeDrive(y,x);
     }
     
