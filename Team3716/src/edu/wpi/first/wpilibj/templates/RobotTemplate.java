@@ -23,7 +23,7 @@ import edu.wpi.first.wpilibj.templates.commands.DriveWithJoystick;
  */
 public class RobotTemplate extends IterativeRobot {
 
-    //Command autonomousCommand;
+    Command autonomousCommand;
 
     /**
      * This function is run when the robot is first started up and should be
@@ -31,7 +31,7 @@ public class RobotTemplate extends IterativeRobot {
      */
     public void robotInit() {
         // instantiate the command used for the autonomous period
-       // autonomousCommand = new ExampleCommand();
+       autonomousCommand = new DriveWithJoystick();
 
         // Initialize all subsystems
         CommandBase.init();
@@ -62,5 +62,6 @@ public class RobotTemplate extends IterativeRobot {
      */
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
+        autonomousCommand.start();
     }
 }
